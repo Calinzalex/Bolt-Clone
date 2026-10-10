@@ -1,0 +1,357 @@
+/* ===== Earn page (earn.html) — loads after m.css, reuses its variables, navbar and footer ===== */
+
+.earn-page {
+    background-color: var(--bg);
+}
+
+/* breadcrumb */
+.crumbs {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.crumbs a {
+    text-decoration: none;
+}
+
+.crumbs a:hover {
+    color: var(--green-deep);
+}
+
+.crumbs .current {
+    color: var(--ink);
+}
+
+/* hero */
+.e-hero {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 24px 20px;
+}
+
+.e-hero h1 {
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -3.5px;
+    line-height: 1.02;
+    max-width: 900px;
+    margin-bottom: 30px;
+}
+
+.e-hero p {
+    color: var(--muted);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    max-width: 780px;
+    margin-bottom: 40px;
+}
+
+.e-btn {
+    display: inline-block;
+    background-color: var(--green);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 30px;
+    border-radius: 14px;
+}
+
+.e-btn:hover {
+    opacity: 0.85;
+}
+
+/* generic section */
+.e-sec {
+    max-width: 1100px;
+    margin: 110px auto 0;
+    padding: 0 24px;
+}
+
+.e-sec h2 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.e-lead {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 760px;
+    margin-bottom: 14px;
+}
+
+.e-note {
+    color: #8a918e;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.e-sec h2 + .e-lead:last-of-type {
+    margin-bottom: 40px;
+}
+
+/* feature cards */
+.feat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.feat {
+    background-color: white;
+    border: 1px solid #dfe3e1;
+    border-radius: 24px;
+    padding: 32px;
+}
+
+.feat h3 {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.feat p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.feat p + p {
+    margin-top: 12px;
+}
+
+/* pictures */
+.pic-pair {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.pic-pair img,
+.pic-wide {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.pic-wide {
+    margin-top: 24px;
+}
+
+/* earnings formula */
+.formula {
+    background-color: var(--green-deep);
+    color: white;
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.formula strong {
+    display: block;
+    font-size: 36px;
+    letter-spacing: -1.2px;
+    margin-bottom: 14px;
+}
+
+.formula span {
+    display: block;
+    color: rgb(190, 222, 205);
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 760px;
+}
+
+.three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* smart tools: 3 on top, 2 below */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+}
+
+.tools-grid .feat {
+    grid-column: span 2;
+}
+
+.tools-grid .feat:nth-child(n + 4) {
+    grid-column: span 3;
+}
+
+/* countries */
+.region-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.country-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background-color: white;
+    border: 1px solid #dfe3e1;
+    border-radius: 16px;
+    padding: 16px 22px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.country-link:hover {
+    border-color: var(--green-deep);
+}
+
+.country-link .arrow {
+    color: var(--green-deep);
+}
+
+/* other ways to earn */
+.two-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.feat .text-link {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--green-deep);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.feat .text-link:hover {
+    text-decoration: underline;
+}
+
+/* FAQ (pure CSS accordion) */
+.faq {
+    border-top: 1px solid #dfe3e1;
+}
+
+.faq details {
+    border-bottom: 1px solid #dfe3e1;
+}
+
+.faq summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 26px 4px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+    flex: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7ebe9;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.faq details[open] summary::after {
+    content: "\2212";
+}
+
+.faq details p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 800px;
+    padding: 0 4px 28px;
+}
+
+.e-end {
+    height: 110px;
+}
+
+/* ---------- tablet / mobile ---------- */
+@media (max-width: 900px) {
+    .e-hero {
+        padding-top: 40px;
+    }
+
+    .e-hero h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .e-hero p {
+        font-size: 17px;
+    }
+
+    .e-sec {
+        margin-top: 70px;
+    }
+
+    .e-sec h2 {
+        font-size: 32px;
+        letter-spacing: -1.2px;
+    }
+
+    .feat-grid,
+    .pic-pair,
+    .three-grid,
+    .two-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid .feat,
+    .tools-grid .feat:nth-child(n + 4) {
+        grid-column: auto;
+    }
+
+    .pic-pair img,
+    .pic-wide {
+        height: 280px;
+    }
+
+    .formula {
+        padding: 28px;
+    }
+
+    .formula strong {
+        font-size: 26px;
+    }
+
+    .faq summary {
+        font-size: 17px;
+    }
+}

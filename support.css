@@ -1,0 +1,209 @@
+/* ===== Support page (support.html) — loads after m.css (navbar, footer, download section, .tag, .earn-btn) ===== */
+
+/* hero + search */
+.s-hero {
+    background-color: white;
+    text-align: center;
+    padding: 90px 24px 70px;
+}
+
+.s-hero h1 {
+    font-size: clamp(44px, 5.2vw, 72px);
+    font-weight: 800;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+}
+
+.s-hero p {
+    color: var(--muted);
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 640px;
+    margin: 0 auto 40px;
+}
+
+.s-search {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 680px;
+    height: 62px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #f1f3f2;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    color: var(--ink);
+    text-align: left;
+}
+
+.s-search:focus-within {
+    border-color: var(--green-deep);
+    background-color: white;
+}
+
+.s-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+    font-size: 20px;
+    color: var(--ink);
+}
+
+.s-search input::placeholder {
+    color: #8a918e;
+}
+
+/* category cards */
+.s-cats {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 24px 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.s-cat {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #dfe3e1;
+    border-radius: 24px;
+    padding: 32px 32px 28px;
+}
+
+.s-cat h2 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+}
+
+.s-cat h2 a {
+    text-decoration: none;
+}
+
+.s-cat h2 a:hover {
+    color: var(--green-deep);
+}
+
+.s-cat ul {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.s-cat li {
+    border-top: 1px solid #e8ebea;
+}
+
+.s-cat li a {
+    display: block;
+    padding: 16px 0;
+    color: #303633;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.s-cat li a:hover {
+    color: var(--green-deep);
+}
+
+.s-more {
+    margin-top: auto;
+    color: var(--green-deep);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.s-more span {
+    margin-left: 6px;
+}
+
+.s-more:hover {
+    text-decoration: underline;
+}
+
+.s-empty {
+    text-align: center;
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 24px 40px;
+}
+
+/* earn promo */
+.s-earn {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 24px 100px;
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+
+.s-earn-text {
+    flex: 1;
+}
+
+.s-earn .tag {
+    margin-bottom: 12px;
+}
+
+.s-earn h3 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+}
+
+.s-earn p {
+    color: #4a504d;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.s-earn img {
+    flex: 0 0 440px;
+    width: 440px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* ---------- tablet / mobile ---------- */
+@media (max-width: 900px) {
+    .s-hero {
+        padding: 60px 24px 50px;
+    }
+
+    .s-hero p {
+        font-size: 17px;
+    }
+
+    .s-cats {
+        grid-template-columns: 1fr;
+        padding-top: 40px;
+    }
+
+    .s-earn {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding-bottom: 70px;
+    }
+
+    .s-earn h3 {
+        font-size: 32px;
+    }
+
+    .s-earn img {
+        flex: none;
+        width: 100%;
+    }
+}

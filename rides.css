@@ -1,0 +1,479 @@
+/* ===== Rides page (rides.html) — loads after m.css and modal.css ===== */
+
+.r-label {
+    display: block;
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.r-label.sub {
+    margin-top: 34px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* shared buttons */
+.r-btn {
+    display: inline-block;
+    border: none;
+    height: 54px;
+    padding: 0 34px;
+    line-height: 54px;
+    border-radius: 14px;
+    background-color: var(--green);
+    color: white;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.r-btn {
+    background-color: var(--green);
+    color: white;
+}
+
+.r-btn:hover {
+    opacity: 0.85;
+}
+
+.r-link {
+    display: inline-block;
+    color: var(--green-deep);
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.r-link:hover {
+    text-decoration: underline;
+}
+
+/* hero */
+.r-hero {
+    background-color: white;
+    text-align: center;
+    padding: 80px 24px 0;
+}
+
+.r-hero h1 {
+    font-size: clamp(44px, 5.6vw, 80px);
+    font-weight: 800;
+    letter-spacing: -3.5px;
+    line-height: 1.05;
+    margin-bottom: 26px;
+}
+
+.r-hero p {
+    color: var(--muted);
+    font-size: 20px;
+    font-weight: 600;
+    max-width: 720px;
+    margin: 0 auto 36px;
+}
+
+.r-hero-img {
+    width: 100%;
+    max-width: 1300px;
+    margin: 64px auto 0;
+    border-radius: 28px 28px 0 0;
+}
+
+/* why ride */
+.r-why {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 110px 24px 50px;
+    text-align: center;
+}
+
+.r-why h2 {
+    font-size: clamp(34px, 4vw, 56px);
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+}
+
+.r-why p {
+    color: var(--muted);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* alternating image + text rows */
+.r-feature {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.r-feature.reverse img {
+    order: 2;
+}
+
+.r-feature img {
+    width: 100%;
+    border-radius: 28px;
+}
+
+.r-feature h3 {
+    font-size: clamp(30px, 3.4vw, 46px);
+    letter-spacing: -1.8px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.r-feature p {
+    color: var(--muted);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* business */
+.r-business {
+    max-width: 1200px;
+    margin: 70px auto 0;
+    padding: 0 24px;
+}
+
+.r-business-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #dfe3e1;
+    border-radius: 32px;
+    padding: 60px;
+}
+
+.r-business-text h2 {
+    font-size: clamp(32px, 3.6vw, 50px);
+    letter-spacing: -2px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.r-business-text h3 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.r-business-text p {
+    color: var(--muted);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.r-business-top img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+.r-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.r-gallery img {
+    width: 100%;
+    border-radius: 22px;
+}
+
+/* safety (dark) */
+.r-safety {
+    background-color: var(--dark);
+    color: white;
+    margin-top: 110px;
+    padding: 100px 24px;
+}
+
+.r-safety-head {
+    max-width: 860px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.r-safety-head h2 {
+    font-size: clamp(36px, 4.4vw, 64px);
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+}
+
+.r-safety-head p {
+    color: #b4bcb9;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.r-safety-head small {
+    color: #7d8683;
+    font-size: 14px;
+}
+
+.r-safety-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.r-safe {
+    display: flex;
+    flex-direction: column;
+    background-color: #181b1a;
+    border-radius: 24px;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.r-safe img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 26px;
+}
+
+.r-safe h3 {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+    padding: 0 28px;
+    margin-bottom: 12px;
+}
+
+.r-safe p {
+    color: #b4bcb9;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 28px;
+}
+
+.r-safe a {
+    margin-top: 18px;
+    padding: 0 28px;
+    color: #6fd3a0;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.r-safe a:hover {
+    text-decoration: underline;
+}
+
+/* latest features */
+.r-latest {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 24px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.r-latest h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    letter-spacing: -2.2px;
+    line-height: 1.08;
+    margin-bottom: 22px;
+}
+
+.r-latest p {
+    color: var(--muted);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.r-latest img {
+    width: 100%;
+    border-radius: 28px;
+}
+
+/* airports and cities */
+.r-airports {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px 60px;
+}
+
+.r-airports h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    letter-spacing: -2.2px;
+    margin-bottom: 40px;
+}
+
+.r-airports-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.r-air img {
+    width: 100%;
+    border-radius: 24px;
+}
+
+.r-air h3 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin: 24px 0 10px;
+}
+
+.r-air p {
+    color: var(--muted);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* faq */
+.r-faq {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 24px 110px;
+}
+
+.r-faq h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    letter-spacing: -2.2px;
+    margin-bottom: 36px;
+}
+
+.r-faq details {
+    border-bottom: 1px solid #dfe3e1;
+}
+
+.r-faq details:first-of-type {
+    border-top: 1px solid #dfe3e1;
+}
+
+.r-faq summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.r-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.r-faq summary::after {
+    content: "+";
+    flex: none;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--muted);
+}
+
+.r-faq details[open] summary::after {
+    content: "\2212";
+}
+
+.r-faq details p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.6;
+    padding: 0 40px 24px 0;
+}
+
+.r-faq details p a {
+    color: var(--green-deep);
+    text-decoration: underline;
+}
+
+.r-more {
+    display: inline-block;
+    margin-top: 36px;
+    padding: 16px 28px;
+    border-radius: 12px;
+    background-color: #e7ebe9;
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.r-more:hover {
+    background-color: #d9dfdc;
+}
+
+/* ---------- tablet / mobile ---------- */
+@media (max-width: 900px) {
+    .r-hero {
+        padding-top: 50px;
+    }
+
+    .r-hero p,
+    .r-why p,
+    .r-feature p,
+    .r-latest p {
+        font-size: 17px;
+    }
+
+    .r-hero-img {
+        margin-top: 40px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .r-why {
+        padding-top: 70px;
+    }
+
+    .r-feature,
+    .r-latest,
+    .r-airports-grid,
+    .r-business-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .r-feature.reverse img {
+        order: 0;
+    }
+
+    .r-business-top {
+        padding: 28px;
+    }
+
+    .r-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .r-safety {
+        padding: 70px 24px;
+    }
+
+    .r-safety-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .r-latest {
+        padding-top: 70px;
+    }
+}

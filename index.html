@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt</title>
+    <link rel="stylesheet" href="m.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <input type="checkbox" id="lang-toggle" class="lang-toggle">
+        <a class="logo" href="index.html">Bolt</a>
+
+        <div class="nav-right">
+            <label class="language" for="lang-toggle">
+                <div class="flag">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span>EN</span>
+            </label>
+
+            <a href="support.html">Support</a>
+
+            <div class="register-wrap">
+                <input type="checkbox" id="register-toggle" class="register-toggle">
+                <label class="register" for="register-toggle">Register</label>
+
+                <div class="register-panel">
+                    <a href="driver.html" class="rp-item">
+                        <span class="rp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#4a56d6"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg></span>
+                        <span class="rp-text"><b>Become a driver</b><small>Make money on your terms</small></span>
+                        <svg class="rp-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                    <a href="#" class="rp-item">
+                        <span class="rp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#207e52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-8h5l3 8M10 9L9 6H7"/></svg></span>
+                        <span class="rp-text"><b>Become a courier</b><small>Deliver food and get paid weekly</small></span>
+                        <svg class="rp-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                    <a href="#" class="rp-item">
+                        <span class="rp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#207e52" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v7a2 2 0 0 0 2 2v9M9 3v7M7 3v7M18 3c-2.4 2-2.4 7 0 8.5V21"/></svg></span>
+                        <span class="rp-text"><b>Add a restaurant or store</b><small>Reach more customers and increase earnings</small></span>
+                        <svg class="rp-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                    <a href="#" class="rp-item">
+                        <span class="rp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#207e52"><path d="M4 12l2-5.5A2 2 0 0 1 7.9 5h8.2A2 2 0 0 1 18 6.5L20 12v6h-3v-2H7v2H4z"/></svg></span>
+                        <span class="rp-text"><b>Sign up as a fleet owner</b><small>Add your fleet to Bolt and boost your income</small></span>
+                        <svg class="rp-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                    <a href="#" class="rp-item">
+                        <span class="rp-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#207e52"><rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M9 8V5.5h6V8" fill="none" stroke="#207e52" stroke-width="2"/></svg></span>
+                        <span class="rp-text"><b>Bolt for Business</b><small>Bolt products and services scaled-up for your business</small></span>
+                        <svg class="rp-chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+
+            <label class="menu" for="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="menu-panel">
+            <div class="menu-col">
+                <h5>Products</h5>
+                <a href="rides.html">Rides</a>
+                <a href="#">Scooters</a>
+                <a href="#">E-Bikes</a>
+                <a href="#">Bolt Drive</a>
+                <a href="#">Bolt Food</a>
+                <a href="#">Bolt Market</a>
+                <a href="#">Bolt for Business</a>
+                <a href="#">Bolt Plus</a>
+                <a href="#">Bolt Send</a>
+            </div>
+
+            <div class="menu-col">
+                <h5>Earn</h5>
+                <a href="driver.html">Bolt Drivers</a>
+                <a href="earn.html">Driver earnings</a>
+                <a href="#">Bolt Couriers</a>
+                <a href="#">Courier earnings</a>
+                <a href="#">Bolt Food Merchants</a>
+                <a href="#">Bolt Fleets</a>
+                <a href="#">Bolt Franchise</a>
+            </div>
+
+            <div class="menu-col">
+                <h5>Company</h5>
+                <a href="#">About Bolt</a>
+                <a href="#">Bolt's Mission</a>
+                <a href="#">Leadership</a>
+                <a href="#">Careers</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Blog</a>
+                <a href="#">Newsroom</a>
+            </div>
+
+            <div class="menu-col">
+                <h5>Support</h5>
+                <a href="#">Riders</a>
+                <a href="#">Drivers</a>
+                <a href="#">Bolt Food</a>
+                <a href="#">Couriers</a>
+                <a href="#">Fleets</a>
+                <a href="#">Restaurants</a>
+            </div>
+
+            <div class="menu-col">
+                <h5>Safety</h5>
+                <a href="#">Rider safety</a>
+                <a href="#">Driver safety</a>
+                <a href="#">Scooter safety</a>
+                <a href="#">Safety lab</a>
+            </div>
+        </div>
+
+        <div class="lang-modal">
+            <label class="lang-backdrop" for="lang-toggle"></label>
+
+            <div class="lang-box">
+                <div class="lang-top">
+                    <div class="lang-search">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="region-search" placeholder="Search region" autocomplete="off">
+                    </div>
+                    <label class="lang-close" for="lang-toggle" aria-label="Close">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>
+                    </label>
+                </div>
+
+                <ul class="region-list"><!-- filled in by script.js --></ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+    <main class="hero">
+        <h1>Riding is the new driving</h1>
+
+        <p>
+            The freedom to go anywhere without paying for parking, fuel, or maintenance.
+            All you need is an<br>
+            app and a destination.
+        </p>
+
+        <div class="buttons">
+            <button class="get-bolt">Get Bolt</button>
+            <a class="earn-bolt" href="earn.html">Earn with Bolt</a>
+        </div>
+
+        <div class="first-image">
+            <img src="media/image1.png" alt="">
+        </div>
+    </main>
+
+    <!-- OUR SERVICES -->
+    <section class="container service">
+        <h1>Our services</h1>
+        <p>
+            Products and features vary by country. Some features listed here may not be available in your
+            app.
+        </p>
+    </section>
+
+    <section class="images">
+        <div class="card card-rides">
+            <img src="media/image2.png" alt="">
+            <div class="card-text">
+                <h3>Rides</h3>
+                <p>Request in seconds, ride in minutes.</p>
+                <a class="card-btn" href="rides.html">Get started</a>
+            </div>
+        </div>
+
+        <div class="card card-food">
+            <img src="media/image3.png" alt="">
+            <div class="card-text">
+                <h3>Delivery</h3>
+                <p>Your favourite food, delivered fast.</p>
+                <a class="card-btn" href="#">Go to Bolt Food</a>
+            </div>
+        </div>
+
+        <div class="card card-drive">
+            <img src="media/image4.png" alt="">
+            <div class="card-text">
+                <h3>Car-sharing</h3>
+                <p>High-quality car rental made easy.</p>
+                <a class="card-btn" href="#">Go to Bolt Drive</a>
+            </div>
+        </div>
+
+        <div class="card card-market">
+            <img src="media/image5.png" alt="">
+            <div class="card-text">
+                <h3>Groceries</h3>
+                <p>All the essentials whenever you need them.</p>
+                <a class="card-btn" href="#">Go to Bolt Market</a>
+            </div>
+        </div>
+
+        <div class="card card-biz">
+            <img src="media/image6.png" alt="">
+            <div class="card-text">
+                <h3>Business</h3>
+                <p>Manage business travel for your team and clients.</p>
+                <a class="card-btn" href="#">Go to Bolt for Business</a>
+            </div>
+        </div>
+
+        <div class="card card-micro">
+            <img src="media/image7.png" alt="">
+            <div class="card-text">
+                <h3>Micromobility</h3>
+                <p>2-wheel ride rental at your fingertips.</p>
+                <a class="card-btn" href="#">Learn more</a>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="carousel-nav">
+        <button class="nav-btn" id="prev" aria-label="Previous">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="nav-btn" id="next" aria-label="Next">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+
+    <!-- MEET BOLT 7 -->
+    <section class="machine">
+        <h1>Meet Bolt 7</h1>
+        <p>
+            Bolt 7 is the next-generation scooter, built together with city authorities and shaped by what
+            riders struggle with day to day. It combines a fully integrated display with navigation,
+            real-time parking guidance, stronger safety features, and built-in AI systems to help reduce
+            pavement riding and make shared scooters safer for everyone.
+        </p>
+        <a class="ride" href="#">Start riding</a>
+        <img src="media/image8.png" alt="">
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="green">
+        <p class="label">About us</p>
+        <h1>Bolt is the first European <br> mobility super-app.</h1>
+        <p class="pa">
+            We’re making cities for people, offering better alternatives for every purpose a private
+            car serves — including ride-hailing, shared cars, scooters, and food and grocery delivery.
+        </p>
+        <a class="small-gr" href="#">Our mission</a>
+    </section>
+
+    <section class="new-g">
+        <img src="media/image9.png" alt="Bolt app open on a smart phone.">
+    </section>
+
+    <!-- EARN MONEY WITH BOLT -->
+    <section class="white-bacg">
+        <div class="earn-head">
+            <h1>Earn money with Bolt</h1>
+            <p>
+                Join over 4.5 million partners worldwide that earn with Bolt. For drivers, couriers,
+                merchants, and fleet owners looking for new ways to boost revenue.
+            </p>
+        </div>
+
+        <div class="earn-grid">
+            <article class="earn-card">
+                <img src="media/image10.png" alt="">
+                <div class="earn-text">
+                    <span class="tag">Earn money as a Bolt driver</span>
+                    <h3>Drive and earn money</h3>
+                    <p>Our 200+ million riders will send you plenty of ride requests. When demand is high, you can earn even more.</p>
+                    <a class="earn-btn" href="driver.html">Register to drive</a>
+                </div>
+            </article>
+
+            <article class="earn-card">
+                <img src="media/image11.png" alt="">
+                <div class="earn-text">
+                    <span class="tag">Become a Bolt courier partner</span>
+                    <h3>Earn with every delivery</h3>
+                    <p>You decide when and how often you deliver — weekdays, evenings, weekends, or just the occasional hour — it’s up to you.</p>
+                    <a class="earn-btn" href="#">Register as a courier</a>
+                </div>
+            </article>
+
+            <article class="earn-card">
+                <img src="media/image12.png" alt="">
+                <div class="earn-text">
+                    <span class="tag">Increase earnings as merchant</span>
+                    <h3>Increase your sales and reach new customers</h3>
+                    <p>Millions of our users are ordering food or goods from restaurants and stores just like yours.</p>
+                    <a class="earn-btn" href="#">Register with Bolt Food</a>
+                </div>
+            </article>
+
+            <article class="earn-card">
+                <img src="media/image13.png" alt="">
+                <div class="earn-text">
+                    <span class="tag">Join Bolt with your fleet and earn more</span>
+                    <h3>Grow your transport business</h3>
+                    <p>As a fleet owner and Bolt partner, you can manage your assets from one easy-to-use dashboard and grow your transport business.</p>
+                    <a class="earn-btn" href="#">Register your fleet</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- LATEST FEATURES -->
+    <section class="latest">
+        <div class="latest-text">
+            <p class="label">Latest features</p>
+            <h2>Bolt Send</h2>
+            <p>On-demand parcel delivery. Send or receive items the same day.</p>
+            <p class="small">Check in app for available features.</p>
+            <a class="send-btn" href="#">Send items</a>
+        </div>
+        <img src="media/image14.png" alt="">
+    </section>
+
+    <!-- DOWNLOAD APPS -->
+    <section class="download">
+        <div class="download-head">
+            <h2>Download our apps</h2>
+            <p>Available for iOS and Android devices.</p>
+        </div>
+
+        <div class="download-box">
+            <img id="dl-img" src="media/image15.png" alt="Download our apps">
+
+            <div class="download-text">
+                <div class="tabs">
+                    <button type="button" class="tab active" data-tab="rides">Rides</button>
+                    <button type="button" class="tab" data-tab="delivery">Delivery</button>
+                </div>
+
+                <h3 id="dl-title">The fast, affordable way to ride.</h3>
+                <p id="dl-sub">Available for iOS and Android devices.</p>
+                <button id="dl-btn" class="get-bolt">Get Bolt</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="news">
+        <h2>News and updates</h2>
+        <a class="view-all" href="#">View all <span>&#8599;</span></a>
+
+        <div class="news-grid">
+            <article class="news-main">
+                <img src="media/image16.png" alt="">
+                <div class="news-main-text">
+                    <div class="news-meta">
+                        <span class="news-tag">Rides</span>
+                        <span class="news-date">26 May 2026</span>
+                    </div>
+                    <h3>Your Bolt Ride Is Giving Back This Children's Day — Here's How</h3>
+                </div>
+            </article>
+
+            <div class="news-list">
+                <a href="#">
+                    <img src="media/image17.png" alt="">
+                    <div>
+                        <h4>To give you that extra layer of precision and peace of mind, Bolt has introduced pick-up codes.</h4>
+                        <span>25 Mar 2026</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="media/image18.png" alt="">
+                    <div>
+                        <h4>Your Bolt Rewind has arrived</h4>
+                        <span>16 Dec 2025</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="media/image19.png" alt="">
+                    <div>
+                        <h4>Bolt says thanks: win 3 months of free rides</h4>
+                        <span>6 Oct 2025</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-cols">
+            <div>
+                <h5>Products</h5>
+                <a href="rides.html">Rides</a>
+                <a href="#">Scooters</a>
+                <a href="#">E-Bikes</a>
+                <a href="#">Bolt Drive</a>
+                <a href="#">Bolt Food</a>
+                <a href="#">Bolt Market</a>
+                <a href="#">Bolt for Business</a>
+                <a href="#">Bolt Plus</a>
+                <a href="#">Bolt Send</a>
+            </div>
+
+            <div>
+                <h5>Earn</h5>
+                <a href="driver.html">Bolt Drivers</a>
+                <a href="earn.html">Driver earnings</a>
+                <a href="#">Bolt Couriers</a>
+                <a href="#">Courier earnings</a>
+                <a href="#">Bolt Food Merchants</a>
+                <a href="#">Bolt Fleets</a>
+                <a href="#">Bolt Franchise</a>
+            </div>
+
+            <div>
+                <h5>Company</h5>
+                <a href="#">About Bolt</a>
+                <a href="#">Bolt's Mission</a>
+                <a href="#">Leadership</a>
+                <a href="#">Careers</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Project Zero</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Urban Fund</a>
+                <a href="#">Investor relations</a>
+                <a href="#">Blog</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Brand</a>
+            </div>
+
+            <div>
+                <h5>Support</h5>
+                <a href="#">Riders</a>
+                <a href="#">Drivers</a>
+                <a href="#">Bolt Food</a>
+                <a href="#">Couriers</a>
+                <a href="#">Fleets</a>
+                <a href="#">Restaurants</a>
+                <a href="#">Bolt for Business</a>
+            </div>
+
+            <div>
+                <h5>Safety</h5>
+                <a href="#">Rider safety</a>
+                <a href="#">Driver safety</a>
+                <a href="#">Scooter safety</a>
+                <a href="#">Safety lab</a>
+
+                <h5 class="gap">Locations</h5>
+                <a href="#">Our cities</a>
+                <a href="#">Our airports</a>
+
+                <h5 class="gap">City solutions</h5>
+                <a href="#">Our mission</a>
+                <a href="#">Charging docks</a>
+            </div>
+        </div>
+
+        <div class="footer-mid">
+            <div class="footer-logo">Bolt</div>
+            <div class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">X</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">TikTok</a>
+            </div>
+            <div class="footer-btns">
+                <button class="get-bolt">Get Bolt</button>
+                <button class="earn-bolt dark">Get Bolt Food</button>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="legal">
+                <a href="#">Suppliers</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy</a>
+                <a href="#">Insurance</a>
+                <a href="#">Cookies</a>
+                <a href="#">Security</a>
+                <a href="#">Community Guidelines</a>
+            </div>
+            <span>© 2026 Bolt Technology OÜ</span>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
