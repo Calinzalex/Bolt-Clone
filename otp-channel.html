@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify your phone number | Bolt</title>
+    <!-- m.css gives us the shared colours (--green, --ink ...) and fonts -->
+    <link rel="stylesheet" href="m.css">
+    <link rel="stylesheet" href="otp.css">
+</head>
+
+<body class="otp-page">
+
+    <!-- Slim top bar: no full navbar, so the driver stays focused on this one step -->
+    <header class="otp-top">
+        <a class="otp-back" href="driver.html#signup" id="back-link">&larr; Back</a>
+        <a class="otp-logo" href="index.html">Bolt</a>
+    </header>
+
+    <main class="otp-card">
+
+        <!-- STEP 1: choose WhatsApp or SMS -->
+        <section id="otp-choose">
+            <h1>How should we send your code?</h1>
+            <p class="otp-sub">
+                We'll send a 6-digit code to <strong id="otp-phone">your phone number</strong>
+                to confirm it's yours.
+            </p>
+
+            <form id="otp-form" novalidate>
+                <!-- Each choice is a label wrapping a hidden radio, so the whole row is clickable -->
+                <label class="otp-option">
+                    <input type="radio" name="channel" value="whatsapp">
+                    <span class="otp-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2-1.8-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.8z"/></svg>
+                    </span>
+                    <span class="otp-text"><b>WhatsApp</b><small>Get the code in a WhatsApp message</small></span>
+                    <span class="otp-dot"></span>
+                </label>
+
+                <label class="otp-option">
+                    <input type="radio" name="channel" value="sms">
+                    <span class="otp-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="13" x2="13" y2="13"/></svg>
+                    </span>
+                    <span class="otp-text"><b>SMS</b><small>Get the code in a text message</small></span>
+                    <span class="otp-dot"></span>
+                </label>
+
+                <p class="otp-error" id="otp-error" role="alert"></p>
+
+                <button class="signup-btn" id="otp-send" type="submit">Send code</button>
+            </form>
+
+            <p class="otp-fine">Message and data rates may apply.</p>
+        </section>
+
+        <!-- STEP 2: shown after the code is "sent" (hidden until then) -->
+        <section id="otp-done" hidden>
+            <h1>Code sent</h1>
+            <p class="otp-sub" id="otp-done-text"></p>
+            <a class="signup-btn otp-link-btn" href="driver.html">Back to sign up</a>
+        </section>
+
+    </main>
+
+    <script src="otp.js"></script>
+</body>
+</html>

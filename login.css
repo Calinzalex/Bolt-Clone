@@ -1,0 +1,54 @@
+/* ===== Login page (login.html) — loads after m.css and otp.css ===== */
+
+/* these two come from driver.css, which this page doesn't load, so they are restated here */
+.f-label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #303633;
+    margin: 0 0 10px;
+}
+
+.f-input {
+    width: 100%;
+    height: 54px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #f1f3f2;
+    font-family: inherit;
+    font-size: 19px;
+    color: var(--ink);
+    padding: 0 16px;
+}
+
+.f-input::placeholder {
+    color: #8a918e;
+}
+
+.f-input:focus {
+    outline: none;
+    border-color: var(--green-deep);
+    background-color: white;
+}
+
+/* red border when the login fails (login.js adds the class) */
+.f-input.invalid {
+    border-color: #c0392b;
+}
+
+.login-line {
+    margin-top: 22px;
+    font-size: 17px;
+    color: #4a504d;
+    text-align: center;
+}
+
+.login-line a {
+    color: var(--green-deep);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-line a:hover {
+    text-decoration: underline;
+}

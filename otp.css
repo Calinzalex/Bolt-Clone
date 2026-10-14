@@ -1,0 +1,204 @@
+/* ===== OTP channel page (otp-channel.html) — loads after m.css, reuses its colour variables ===== */
+
+.otp-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 60px;
+}
+
+/* top bar */
+.otp-top {
+    width: min(480px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.otp-back {
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.otp-back:hover {
+    color: var(--green-deep);
+}
+
+.otp-logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+/* white card */
+.otp-card {
+    width: min(480px, 100%);
+    background-color: white;
+    border: 1px solid #dfe3e1;
+    border-radius: 24px;
+    padding: 36px 32px 32px;
+}
+
+.otp-card h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.otp-sub {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.otp-sub strong {
+    color: var(--ink);
+}
+
+/* a choice row */
+.otp-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border: 2px solid var(--line);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.otp-option:hover {
+    border-color: #aeb6b2;
+}
+
+/* the real radio button is hidden, but still works with the keyboard */
+.otp-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* :has() lets the row react when its radio is checked / focused */
+.otp-option:has(input:checked) {
+    border-color: var(--green-deep);
+    background-color: #eef7f2;
+}
+
+.otp-option:has(input:focus-visible) {
+    outline: 3px solid #9fd3b9;
+    outline-offset: 2px;
+}
+
+.otp-icon {
+    flex: none;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #f1f3f2;
+    color: var(--green-deep);
+}
+
+.otp-text {
+    flex: 1;
+}
+
+.otp-text b {
+    display: block;
+    font-size: 18px;
+}
+
+.otp-text small {
+    display: block;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* round indicator on the right */
+.otp-dot {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c3c9c6;
+    border-radius: 50%;
+}
+
+.otp-option:has(input:checked) .otp-dot {
+    border-color: var(--green-deep);
+}
+
+.otp-option:has(input:checked) .otp-dot::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--green-deep);
+}
+
+.otp-error {
+    min-height: 22px;
+    margin: 6px 0 0;
+    color: #c0392b;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* .signup-btn comes from driver.css, which this page doesn't load, so it is restated here */
+.otp-card .signup-btn {
+    display: block;
+    width: 100%;
+    height: 60px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: white;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.otp-card .signup-btn:hover {
+    opacity: 0.85;
+}
+
+.otp-card .signup-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.otp-fine {
+    margin-top: 18px;
+    color: #8a918e;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .otp-card {
+        padding: 28px 22px 26px;
+    }
+
+    .otp-card h1 {
+        font-size: 28px;
+    }
+}

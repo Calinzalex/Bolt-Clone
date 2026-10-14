@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm your registration | Bolt</title>
+    <link rel="stylesheet" href="m.css">
+    <link rel="stylesheet" href="otp.css">
+    <link rel="stylesheet" href="enter-code.css">
+</head>
+
+<body class="otp-page">
+
+    <header class="otp-top">
+        <a class="otp-back" href="otp-channel.html">&larr; Back</a>
+        <a class="otp-logo" href="index.html">Bolt</a>
+    </header>
+
+    <main class="otp-card">
+
+        <!-- STEP: type the code -->
+        <section id="code-box">
+            <h1>Enter your 6-digit code</h1>
+            <p class="otp-sub">
+                We sent it by <strong id="code-channel">WhatsApp</strong>
+                to <strong id="code-phone"></strong>. It works for 5 minutes.
+            </p>
+
+            <!-- DEMO ONLY: no message is really sent, so the code is shown here.
+                 Set DEMO_MODE to false in enter-code.js to hide this box. -->
+            <div class="demo-note" id="demo-note" hidden>
+                <b>Demo mode:</b> no message is sent. Your code is <strong id="demo-code"></strong>
+            </div>
+
+            <form id="code-form" novalidate>
+                <div class="code-boxes" id="code-boxes">
+                    <input class="code-box" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1">
+                    <input class="code-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+                    <input class="code-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+                    <input class="code-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+                    <input class="code-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+                    <input class="code-box" type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+                </div>
+
+                <p class="otp-error" id="code-error" role="alert"></p>
+
+                <button class="signup-btn" type="submit">Confirm registration</button>
+            </form>
+
+            <p class="resend">
+                Didn't get the code?
+                <button class="link-btn" id="resend-btn" type="button" disabled>Resend code</button>
+                <span id="resend-timer"></span>
+            </p>
+        </section>
+
+        <!-- STEP: success (hidden until the code is correct) -->
+        <section id="success-box" hidden>
+            <div class="check" aria-hidden="true">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5 12 10 17 19 7"/></svg>
+            </div>
+            <h1>Registration confirmed</h1>
+            <p class="otp-sub" id="success-text"></p>
+            <a class="signup-btn" href="login.html">Log in</a>
+        </section>
+
+    </main>
+
+    <script src="otp-core.js"></script>
+    <script src="enter-code.js"></script>
+</body>
+</html>

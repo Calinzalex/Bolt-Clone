@@ -1,0 +1,101 @@
+/* ===== Enter-code page (enter-code.html) — loads after m.css and otp.css ===== */
+
+/* the 6 digit boxes */
+.code-boxes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.code-box {
+    width: 100%;
+    height: 62px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #f1f3f2;
+    font-family: inherit;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+}
+
+.code-box:focus {
+    outline: none;
+    border-color: var(--green-deep);
+    background-color: white;
+}
+
+/* red border after a wrong code (enter-code.js adds the class) */
+.code-box.invalid {
+    border-color: #c0392b;
+}
+
+/* demo box that shows the code */
+.demo-note {
+    margin-bottom: 22px;
+    padding: 12px 14px;
+    border: 1px solid #ecd58a;
+    border-radius: 10px;
+    background-color: #fff8e1;
+    color: #5c4a00;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.demo-note strong {
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+/* resend line */
+.resend {
+    margin-top: 20px;
+    color: var(--muted);
+    font-size: 16px;
+    text-align: center;
+}
+
+.link-btn {
+    border: none;
+    background: none;
+    padding: 0;
+    color: var(--green-deep);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+.link-btn:disabled {
+    color: #8a918e;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+/* success screen */
+.check {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--green-deep);
+}
+
+@media (max-width: 480px) {
+    .code-boxes {
+        gap: 6px;
+    }
+
+    .code-box {
+        height: 54px;
+        font-size: 24px;
+    }
+}

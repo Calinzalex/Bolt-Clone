@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | Bolt Driver Portal</title>
+    <link rel="stylesheet" href="m.css">
+    <!-- otp.css gives us the slim top bar and white card; login.css adds the input styles -->
+    <link rel="stylesheet" href="otp.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body class="otp-page">
+
+    <header class="otp-top">
+        <a class="otp-back" href="driver.html">&larr; Back</a>
+        <a class="otp-logo" href="index.html">Bolt</a>
+    </header>
+
+    <main class="otp-card">
+
+        <!-- LOGIN FORM -->
+        <section id="login-box">
+            <h1>Log in to the Driver Portal</h1>
+            <p class="otp-sub">Use the email or phone number you registered with.</p>
+
+            <form id="login-form" novalidate>
+                <label class="f-label" for="login-id">Email or phone number</label>
+                <input class="f-input" type="text" id="login-id" autocomplete="username" placeholder="Enter email or phone number">
+
+                <p class="otp-error" id="login-error" role="alert"></p>
+
+                <button class="signup-btn" type="submit">Log in</button>
+            </form>
+
+            <p class="login-line">New to Bolt? <a href="driver.html#signup">Register as a driver</a></p>
+        </section>
+
+        <!-- SHOWN AFTER A SUCCESSFUL LOGIN (hidden until then) -->
+        <section id="welcome-box" hidden>
+            <h1>Welcome back</h1>
+            <p class="otp-sub" id="welcome-text"></p>
+            <button class="signup-btn" id="logout-btn" type="button">Log out</button>
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

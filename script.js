@@ -339,3 +339,53 @@ if (supportSearch) {
     modal.querySelector('.qr-backdrop').addEventListener('click', close);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 })();
+
+
+// ===== Driver page only (driver.html) =====
+// Sign-up form: check the phone number, remember what was typed,
+// then send the driver to the "how should we send your code?" page.
+const signupForm = document.getElementById('signup');
+if (signupForm) {
+    const phoneInput = document.getElementById('d-phone');
+
+    // clear the "invalid number" message as soon as the driver edits the field
+    phoneInput.addEventListener('input', () => phoneInput.setCustomValidity(''));
+
+    signupForm.addEventListener('submit', e => {
+        e.preventDefault();   // we move to the next page ourselves
+
+        // keep only the digits, then drop "234" or a leading 0 the driver may have typed
+        let digits = phoneInput.value.replace(/\D/g, '');
+        if (digits.startsWith('234')) digits = digits.slice(3);
+        if (digits.startsWith('0')) digits = digits.slice(1);
+
+        // a Nigerian mobile number has 10 digits after the country code
+        if (digits.length !== 10) {
+            phoneInput.setCustomValidity('Enter a valid 10-digit phone number');
+            phoneInput.reportValidity();
+            return;
+        }
+
+        // save for the next page (sessionStorage is cleared when the tab closes)
+        try {
+            sessionStorage.setItem('boltSignup', JSON.stringify({
+                email: document.getElementById('d-email').value,
+                phone: digits,
+                city: document.getElementById('d-city').value
+            }));
+        } catch (err) {}
+
+        // "register" the account: keep a list of accounts in localStorage so login.html can find it
+        // (demo only: with a real backend this would be saved on the server)
+        try {
+            const email = document.getElementById('d-email').value.trim().toLowerCase();
+            const accounts = JSON.parse(localStorage.getItem('boltAccounts')) || [];
+            const others = accounts.filter(a => a.email !== email);   // replace an older account with the same email
+            others.push({ email: email, phone: digits, city: document.getElementById('d-city').value });
+            localStorage.setItem('boltAccounts', JSON.stringify(others));
+        } catch (err) {}
+
+        // ?channels=whatsapp,sms decides which options the next page shows
+        window.location.href = 'otp-channel.html?channels=whatsapp,sms';
+    });
+}
