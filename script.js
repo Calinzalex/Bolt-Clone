@@ -366,23 +366,14 @@ if (signupForm) {
             return;
         }
 
-        // save for the next page (sessionStorage is cleared when the tab closes)
+        // keep these details for the next pages; the account is only created
+        // after the driver confirms the code (see enter-code.js)
         try {
             sessionStorage.setItem('boltSignup', JSON.stringify({
                 email: document.getElementById('d-email').value,
                 phone: digits,
                 city: document.getElementById('d-city').value
             }));
-        } catch (err) {}
-
-        // "register" the account: keep a list of accounts in localStorage so login.html can find it
-        // (demo only: with a real backend this would be saved on the server)
-        try {
-            const email = document.getElementById('d-email').value.trim().toLowerCase();
-            const accounts = JSON.parse(localStorage.getItem('boltAccounts')) || [];
-            const others = accounts.filter(a => a.email !== email);   // replace an older account with the same email
-            others.push({ email: email, phone: digits, city: document.getElementById('d-city').value });
-            localStorage.setItem('boltAccounts', JSON.stringify(others));
         } catch (err) {}
 
         // ?channels=whatsapp,sms decides which options the next page shows

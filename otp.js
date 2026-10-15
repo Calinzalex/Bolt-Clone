@@ -1,14 +1,12 @@
 // ===== OTP channel page (otp-channel.html) =====
 // Note: this page has no navbar, so it uses its own small script instead of script.js.
+// It also needs otp-core.js (loaded first in the HTML) for createOtp().
 
 // 1. Grab the elements we need
-const otpForm   = document.getElementById('otp-form');
-const otpSend   = document.getElementById('otp-send');
-const otpError  = document.getElementById('otp-error');
-const otpPhone  = document.getElementById('otp-phone');
-const chooseBox = document.getElementById('otp-choose');
-const doneBox   = document.getElementById('otp-done');
-const doneText  = document.getElementById('otp-done-text');
+const otpForm  = document.getElementById('otp-form');
+const otpSend  = document.getElementById('otp-send');
+const otpError = document.getElementById('otp-error');
+const otpPhone = document.getElementById('otp-phone');
 
 // 2. Show the phone number the driver typed on driver.html
 // driver.html saved it in sessionStorage (see the "Driver page only" part of script.js).
@@ -60,13 +58,8 @@ otpForm.addEventListener('submit', async e => {
     try {
         await sendCode(channel);
 
-        // Success: swap the "choose" box for the "code sent" box.
-        // LATER: when you build the "enter code" page, replace these lines with
-        //        window.location.href = 'enter-code.html?channel=' + channel;
-        const name = channel === 'whatsapp' ? 'WhatsApp' : 'SMS';
-        doneText.textContent = 'We sent a 6-digit code by ' + name + ' to ' + phoneShown + '.';
-        chooseBox.hidden = true;
-        doneBox.hidden = false;
+        // Success: go to the page where the driver types the code
+        window.location.href = 'enter-code.html';
 
     } catch (err) {
         // Failure: explain what happened and let the driver try again
@@ -76,18 +69,11 @@ otpForm.addEventListener('submit', async e => {
     }
 });
 
-// 6. The function that actually asks the server to send the code.
-// For now it only waits one second to imitate a server. When you have a backend,
-// delete the fake wait and use the fetch() block below it.
+// 6. The function that makes the code and "sends" it.
+// For now it waits one second to imitate a server, then makes the code in the browser.
+// With a backend you would ask the server to make and send it instead:
+//   const response = await fetch('/api/send-otp', { method: 'POST', ... });
 async function sendCode(channel) {
     await new Promise(resolve => setTimeout(resolve, 1000));   // fake wait
-
-    /* REAL VERSION (needs a backend):
-    const response = await fetch('/api/send-otp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ channel: channel })
-    });
-    if (!response.ok) throw new Error('Request failed');
-    */
+    createOtp(channel);                                        // from otp-core.js
 }
